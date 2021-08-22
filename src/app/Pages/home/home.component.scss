@@ -5,3 +5,31 @@
   font-size: 8em;
   line-height: 1em;
 }
+.victor {
+  min-width: 640px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.intro {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cat-spin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 680px) {
+  .hi {
+    font-size: 5em;
+    line-height: 1em;
+  }
+  .victor {
+    flex-direction: column;
+    align-items: center;
+  }
+}
