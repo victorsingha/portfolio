@@ -33,9 +33,9 @@
 
   <!-- page2 -->
   <div class="mt-12 flex flex-col items-center">
-    <h2 class="mb-4 mt-12 text-3xl">Partners</h2>
-    <div *ngFor="let item of partnersLogoList">
-      <img src="{{ item.src }}" alt="" />
+    <h2 class="mb-8 mt-12 text-3xl">Partners</h2>
+    <div class="flex flex-wrap justify-center gap-8">
+      <img *ngFor="let item of partnersLogoList" src="{{ item.src }}" alt="" />
     </div>
   </div>
 </div>
