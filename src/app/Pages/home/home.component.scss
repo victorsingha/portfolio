@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 .hi {
   font-family: "Inter", sans-serif;
   font-size: 5em;
@@ -39,6 +39,16 @@
     flex-direction: column;
     align-items: center;
   }
+  .googlelogo {
+    width: 140px;
+  }
+  // .graycolor {
+  //   -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  //   filter: grayscale(0%) !important;
+  // }
+  .screenshots {
+    display: none;
+  }
 }
 
 .mouse {
@@ -68,4 +78,14 @@
     opacity: 0;
     top: 65px;
   }
+}
+
+.graycolor {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.graycolor:hover {
+  cursor: grab;
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
 }

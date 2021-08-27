@@ -9,12 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
+  public partnersLogoList: any;
 
   constructor(public http: HttpClient,private router: Router) { 
-    
+    //constructor code goes
   }
 
-  public partnersLogoList: any;
 
   ngOnInit(): void {
     this.getPartnersLogo();
@@ -23,7 +24,7 @@ export class HomeComponent implements OnInit {
   getPartnersLogo(){
     this.http.get("https://raw.githubusercontent.com/victorsingha/SERVER/main/portfolio/jsons/partners_logo.json")
     .subscribe(res => {
-      console.log(res)
+      //console.log(res)
       this.partnersLogoList = res;
     })
   }
@@ -32,4 +33,5 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/projects']);
   }
 
+  
 }
