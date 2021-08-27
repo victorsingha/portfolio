@@ -10,16 +10,21 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public http: HttpClient,private router: Router) { }
-
-  ngOnInit(): void {
-    this.getData();
+  constructor(public http: HttpClient,private router: Router) { 
+    
   }
 
-  getData(){
-    this.http.get("https://raw.githubusercontent.com/victorsingha/Employee-Payroll-App/main/employee.json")
+  public partnersLogoList: any;
+
+  ngOnInit(): void {
+    this.getPartnersLogo();
+  }
+
+  getPartnersLogo(){
+    this.http.get("https://raw.githubusercontent.com/victorsingha/SERVER/main/portfolio/jsons/partners_logo.json")
     .subscribe(res => {
       console.log(res)
+      this.partnersLogoList = res;
     })
   }
 

@@ -1,4 +1,4 @@
-<div class="mt-8 container mx-auto">
+<div class="mt-8 mb-8 container mx-auto">
   <!-- page1 -->
   <div class="intro">
     <h2 class="hi">Hi</h2>
@@ -33,6 +33,9 @@
 
   <!-- page2 -->
   <div class="mt-12 flex flex-col items-center">
-    <h2 class="text-3xl">Partners</h2>
+    <h2 class="mb-4 mt-12 text-3xl">Partners</h2>
+    <div *ngFor="let item of partnersLogoList">
+      <img src="{{ item.src }}" alt="" />
+    </div>
   </div>
 </div>
