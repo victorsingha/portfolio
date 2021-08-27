@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient,private router: Router) { }
 
   ngOnInit(): void {
     this.getData();
@@ -20,6 +21,10 @@ export class HomeComponent implements OnInit {
     .subscribe(res => {
       console.log(res)
     })
+  }
+
+  openProjects(){
+    this.router.navigate(['/projects']);
   }
 
 }
